@@ -1,208 +1,281 @@
-/* Reset margin and padding for all elements */
+d/* Reset margin and padding for all elements */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* a {
+    text-decoration: none;
+    color: blue;
+  }*/
+
+li {
+  list-style-type: none;
 }
 
 @font-face {
-    font-family: 'Material Icons';
-    src: url('https://fonts.gstatic.com/s/materialicons/v142/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2') format('woff2');
+  font-family: "Material Icons";
+  src: url("https://fonts.gstatic.com/s/materialicons/v142/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2")
+    format("woff2");
 }
 
-
-
-html, body {
-    background-color: #FFF;
-    margin: 0;
-    height: 100%;
+html,
+body {
+  background-color: #fff;
+  margin: 0;
+  height: 100%;
 }
 
-header{
-    color: white;
-    font-size: 16px;
-    font-weight: 400;
+header nav {
+  background-color: #273746;
+  height: 8vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
 }
 
-nav{
-    background-color: #273746;
-    height: 55px;
-    position: relative;
-    font-size: 16px;
-    font-weight: 400;
-    padding: 0 1em;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+#left-side,
+#right-side {
+  display: flex;
+  flex-direction: row;
+  right: 1em;
+  padding: 1em 0;
 }
 
-
-.navbar-left{
-    display: flex;
-    align-items: center;
-    gap: 5%;
+.item-4 a,
+.item-5 a,
+.item-6 a,
+.item-8 a {
+  text-decoration: none;
+  color: inherit; /* color from parent */
 }
 
-.logo-britanica{
-    width: 20%;
+span {
+  margin-left: 1em;
+  margin-right: 1em;
+  display: flex;
+  align-items: center;
 }
+
+.item-4 {
+  margin-left: 2.5em;
+}
+
+.item-7,
+.item-8 {
+  margin-left: 1.5em;
+}
+
+button {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  padding: 4px 11px;
+  background-color: #bb2337;
+  color: #fff;
+  border-radius: 7px;
+  transition: 0.2s ease-in-out;
+}
+
+main {
+  display: flex;
+  align-content: center;
+  background: burlywood;
+  width: 40vw;
+  height: 100%;
+  display: flex;
+  margin: 8vh 5%;
+}
+
+article {
+  background: lightpink;
+  width: 25vw;
+  height: 98%;
+  position: absolute;
+  margin: 2em 0px;
+}
+
+aside {
+  background: grey;
+  width: 15vw;
+  height: 50%;
+  border: 2px;
+  position: absolute;
+  margin-left: 25vw;
+  margin-top: 7em;
+  margin-right: 0;
+}
+/*
   
-.navbar-right{
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 10%;
-    padding-right: 0;
-    margin: 0;
-}
-
-
-
-nav li{
-    list-style-type: none;
-    display: flex;
-    align-items: center;
-}
-
-li button {
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 0;
-    padding: 5px 15px;
-    background-color: #bb2337;
-    color: #fff;
-    border-radius: 7px;
-    transition: 0.2s ease-in-out;
-}    
-
-.login-form a{
-    color: white;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    height: 100%;
+  
+  .logo-britanica{
+      width: 20%;
+  }
     
-}
-
-nav ul{
-    padding: 0;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    list-style-type: none;
-}
-
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    height: 100%;
-}
-
-.breadcrumbs {
-    background: white;
-    color: darkblue;
-    padding: 10px 20px;
-    display: flex;
-    align-items: center;
-    margin-bottom: 1em;
-}
-
-.breadcrumbs ul {
-    display: flex;
-    align-items: center;
-    gap: 1em;
-}
-
-.breadcrumbs ul li {
-    display: flex;
-    align-items: center;
-    position: relative;
-}
-
-.breadcrumbs ul li a {
-    color: darkblue;
-    text-decoration: none;
-    margin-right: 1em;
-}
-
-.breadcrumbs ul li::after {
-    content: ">";
-    color: darkblue;
-    margin-left: 1em;
-}
-
-.breadcrumbs ul li:last-child::after {
-    content: "";
-}
-
-main .container {
-    margin-top: 2em;
-    width: 45vw;
-    margin-top: 1em;
-    background: #fff;
-    display: flex;
-    flex-direction: column;
-    border: solid 1px grey;
-    margin: 3% 0 3% 3%;
-    padding: 1em;
-    max-width: 1200px;
-}
-
-article{
-    margin-top: 2em;
-    border: solid 1px grey;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: row;
-    font-size: 18px;
-}
-
-
-section {
-    flex: 3;
-    padding: 1em;
-}
-
-.caption-info-article {
-    color: grey;
-    font-style: italic;
-    font-size: 14px;
-}
-
-.caption-info-article a{
-    text-decoration: none;
-}
-
-
-
-.caption-info-article ul{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-
-
-aside{
-    width: 15vw;
-    justify-content: flex;
-    background: #fff;
-    display: flex;
-    flex-direction: column;
-    border: solid 1px grey;  
-    padding: 1em;
-}
-
-.Tim-pic{
-    margin-bottom: 10px;
-}
-
-.top-card section{
-    margin-top: ;
-}
-
+  .navbar-right{
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 10%;
+      padding-right: 0;
+      margin: 0;
+  }
+  
+  
+  
+  nav li{
+      list-style-type: none;
+      display: flex;
+      align-items: center;
+  }
+  
+  li button {
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 0;
+      padding: 5px 15px;
+      background-color: #bb2337;
+      color: #fff;
+      border-radius: 7px;
+      transition: 0.2s ease-in-out;
+  }    
+  
+  .login-form a{
+      color: white;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      height: 100%;
+      
+  }
+  
+  nav ul{
+      padding: 0;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      list-style-type: none;
+  }
+  
+  
+  nav ul li a {
+      color: white;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      height: 100%;
+  }
+  
+  .breadcrumbs {
+      background: white;
+      color: darkblue;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+      margin-bottom: 1em;
+  }
+  
+  .breadcrumbs ul {
+      display: flex;
+      align-items: center;
+      gap: 1em;
+  }
+  
+  .breadcrumbs ul li {
+      display: flex;
+      align-items: center;
+      position: relative;
+  }
+  
+  .breadcrumbs ul li a {
+      color: darkblue;
+      text-decoration: none;
+      margin-right: 1em;
+  }
+  
+  .breadcrumbs ul li::after {
+      content: ">";
+      color: darkblue;
+      margin-left: 1em;
+  }
+  
+  .breadcrumbs ul li:last-child::after {
+      content: "";
+  }
+  
+  main .container {
+      margin-top: 2em;
+      width: 45vw;
+      margin-top: 1em;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      border: solid 1px grey;
+      margin: 3% 0 3% 3%;
+      padding: 1em;
+      max-width: 1200px;
+  }
+  
+  article{
+      margin-top: 2em;
+      border: solid 1px grey;
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: row;
+      font-size: 18px;
+  }
+  
+  
+  section {
+      flex: 3;
+      padding: 1em;
+  }
+  
+  .caption-info-article {
+      color: grey;
+      font-style: italic;
+      font-size: 14px;
+  }
+  
+  .caption-info-article a{
+      text-decoration: none;
+  }
+  
+  
+  
+  .caption-info-article ul{
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+  }
+  
+  
+  
+  aside{
+      width: 15vw;
+      justify-content: flex;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      border: solid 1px grey;  
+      padding: 1em;
+  }
+  
+  .Tim-pic{
+      margin-bottom: 10px;
+  }
+  
+  .top-card section{
+      margin-top: ;
+  }
+  
+  */
